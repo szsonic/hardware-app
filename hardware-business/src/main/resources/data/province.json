@@ -1,0 +1,105 @@
+[
+   		{
+            "pro_id": 9,
+            "name": "上海",
+            "pro_sort": 3,
+            "pro_remark": 0
+        },
+        {
+            "pro_id": 1,
+            "name": "北京",
+            "pro_sort": 1,
+            "pro_remark": 0
+        },
+        {
+            "pro_id": 10,
+            "name": "江苏省",
+            "pro_sort": 11,
+            "pro_remark": 0
+        },
+        {
+            "pro_id": 11,
+            "name": "浙江省",
+            "pro_sort": 12,
+            "pro_remark": 0
+        },
+        {
+            "pro_id": 19,
+            "name": "广东省",
+            "pro_sort": 20,
+            "pro_remark": 0
+        },
+        {
+            "pro_id": 13,
+            "name": "福建省",
+            "pro_sort": 14,
+            "pro_remark": 0
+        },
+        {
+            "pro_id": 18,
+            "name": "湖南省",
+            "pro_sort": 19,
+            "pro_remark": 0
+        },
+        {
+            "pro_id": 17,
+            "name": "湖北省",
+            "pro_sort": 18,
+            "pro_remark": 0
+        },
+        {
+            "pro_id": 15,
+            "name": "山东省",
+            "pro_sort": 16,
+            "pro_remark": "省份"
+        },
+        {
+            "pro_id": 28,
+            "name": "四川省",
+            "pro_sort": 22,
+            "pro_remark": 0
+        },
+        {
+            "pro_id": 20,
+            "name": "海南省",
+            "pro_sort": 24,
+            "pro_remark": "省份"
+        },
+        {
+            "pro_id": 2,
+            "name": "天津",
+            "pro_sort": 2,
+            "pro_remark": "直辖市"
+        },
+        {
+            "pro_id": 14,
+            "name": "江西省",
+            "pro_sort": 15,
+            "pro_remark": "省份"
+        },
+        {
+            "pro_id": 3,
+            "name": "河北省",
+            "pro_sort": 5,
+            "pro_remark": "省份"
+        },
+        {
+            "pro_id": 6,
+            "name": "辽宁省",
+            "pro_sort": 8,
+            "pro_remark": "省份"
+        },
+        {
+            "pro_id": 27,
+            "name": "重庆",
+            "pro_sort": 28,
+            "pro_remark": "直辖市"
+        },
+        {
+            "pro_id": 4,
+            "name": "山西省",
+            "pro_sort": 6,
+            "pro_remark": "省份"
+        }
+
+]
