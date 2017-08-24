@@ -1,6 +1,7 @@
 package com.support.dao.reposiotry.base;
 
 import org.springframework.data.jpa.repository.support.SimpleJpaRepository;
+import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
@@ -10,6 +11,7 @@ import java.util.List;
 /**
  * Created by konghao on 2016/12/7.
  */
+@Repository
 public class BaseRepositoryImpl<T, ID extends Serializable> extends SimpleJpaRepository<T,ID>
         implements BaseRepository<T,ID> {
     private final EntityManager entityManager;
