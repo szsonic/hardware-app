@@ -1,10 +1,8 @@
 package com.hardware.dao;
 
-import com.hardware.model.FileInfo;
+
 import com.hardware.model.One;
 import com.support.dao.reposiotry.base.BaseRepository;
-import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Repository;
 
 
 /**
