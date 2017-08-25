@@ -15,7 +15,7 @@ import java.util.*;
  * @email: lishicheng@innjia.com
  * @date: 2017/8/24
  */
-@org.springframework.context.annotation.Configuration
+//@org.springframework.context.annotation.Configuration
 public class FreemarkerConfig {
     //基础路径设置
     protected final static String BASE_PATH = "/hardware-service";

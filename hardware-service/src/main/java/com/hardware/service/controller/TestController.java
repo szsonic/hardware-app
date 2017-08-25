@@ -36,7 +36,7 @@ public class TestController {
     public ModelAndView Test(HttpServletRequest request, HttpServletResponse response){
         List <One> oneList = oneRepository.findAll();
         ModelAndView modelAndView = new ModelAndView("/test");
-        modelAndView.addObject("one",oneList.get(0));
+        modelAndView.addObject("oneList",oneList);
 
         return modelAndView;
     }
