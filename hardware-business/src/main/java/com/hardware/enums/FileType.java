@@ -1,7 +1,5 @@
 package com.hardware.enums;
 
-import javax.persistence.Entity;
-
 /**
  * 文件类型枚举类<br>
  * PHOTO("图片"), SOUND("声音"), VIDEO("视频"), DOCUMENT("文档")

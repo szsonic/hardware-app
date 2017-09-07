@@ -1,10 +1,13 @@
 <#escape x as x?html>
     {
 
-        {
-            "id":"${one.id}",
-            "name":"${one.name}"
-        }
+        <#list oneList as one>
+                {
+                    "id":"${one.id}",
+                    "name":"${one.name}"
+                }
+
+        </#list>
 
     }
 </#escape>

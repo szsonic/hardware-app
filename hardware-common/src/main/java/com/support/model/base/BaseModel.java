@@ -1,6 +1,7 @@
 package com.support.model.base;
 
 import com.support.model.RecordStatus;
+import org.apache.commons.lang.builder.ToStringBuilder;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -11,6 +12,7 @@ import java.util.Date;
  * model基类
  * 所有model均继承此类
  */
+@MappedSuperclass
 public class BaseModel implements Serializable {
     private static final long serialVersionUID = 1L;
 
@@ -54,51 +56,141 @@ public class BaseModel implements Serializable {
     @Transient
     private Date dateEnd;
 
+    /**
+     * 获取记录主键
+     */
     public String getId() {
         return id;
     }
 
+    /**
+     * 设置记录主键
+     */
     public void setId(String id) {
         this.id = id;
     }
 
+    /**
+     * 获取记录状态
+     *
+     * @return status 枚举类型记录状态
+     */
     public RecordStatus getStatus() {
         return status;
     }
 
+    /**
+     * 设置记录状态
+     *
+     * @param status
+     *            枚举类型记录状态
+     */
     public void setStatus(RecordStatus status) {
         this.status = status;
     }
 
+    /**
+     * 获取创建记录时间
+     *
+     * @return Date 日期对象
+     */
     public Date getCreateTime() {
         return createTime;
     }
 
+    /**
+     * 设置创建记录时间
+     *
+     * @param createTime
+     *            日期对象
+     */
     public void setCreateTime(Date createTime) {
         this.createTime = createTime;
     }
 
+    /**
+     * 获取更新记录时间
+     *
+     * @return Date 日期对象
+     */
     public Date getUpdateTime() {
         return updateTime;
     }
 
+    /**
+     * 设置更新记录时间
+     *
+     * @param updateTime
+     *            日期对象
+     */
     public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
     }
 
+    /**
+     * 获取开始时间（用于根据时间段进行查询）
+     *
+     * @return Date 开始时间
+     */
     public Date getDateStart() {
         return dateStart;
     }
 
+    /**
+     * 设置开始时间（用于根据时间段进行查询）
+     *
+     * @param dateStart
+     *            开始时间
+     */
     public void setDateStart(Date dateStart) {
         this.dateStart = dateStart;
     }
 
+    /**
+     * 获取结束时间（用于根据时间段进行查询）
+     *
+     * @return Date 结束时间
+     */
     public Date getDateEnd() {
         return dateEnd;
     }
 
+    /**
+     * 设置结束时间（用于根据时间段进行查询）
+     *
+     * @param dateEnd
+     *            结束时间
+     */
     public void setDateEnd(Date dateEnd) {
         this.dateEnd = dateEnd;
+    }
+
+    /**
+     * 快速获取泛型模型名称（首字母小写）
+     *
+     * @return 返回泛型模型名称
+     */
+    public String getModelName() {
+        String modelName = this.getClass().getName();
+        return modelName.substring(modelName.lastIndexOf(".") + 1, modelName.lastIndexOf(".") + 2).toLowerCase()
+                + modelName.substring(modelName.lastIndexOf(".") + 2);
+    }
+
+    /**
+     * 快速获取泛型模型名称（首字母大写）
+     *
+     * @return 返回泛型模型名称
+     */
+    public String getClazzName() {
+        String modelName = this.getClass().getName();
+        return modelName.substring(modelName.lastIndexOf(".") + 1);
+    }
+
+    /**
+     * 快速将实体输出成字符串
+     */
+    @Override
+    public String toString() {
+        return ToStringBuilder.reflectionToString(this);
     }
 }

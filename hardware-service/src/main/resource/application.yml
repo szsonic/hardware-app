@@ -4,16 +4,26 @@ spring:
     username: root
     password: root
     driver-class-name: com.mysql.jdbc.Driver
-#  freemarker:
-#    template-loader-path: classpath:/templates/views
-#    cache: false
-#    charset: UTF-8
-#    check-template-location: true
-#    content-type: text/html
-#    suffix: .json.ftl
-#    request-context-attribute: request
-#    expose-spring-macro-helpers: true
+  freemarker:
+    template-loader-path: classpath:/templates/views
+    cache: false
+    charset: UTF-8
+    check-template-location: true
+    content-type: text/html
+    suffix: .json.ftl
+    request-context-attribute: request
+    expose-spring-macro-helpers: true
   jpa:
     properties:
           hibernate:
             dialect : org.hibernate.dialect.MySQL5Dialect
+#            cache:
+#              use_second_level_cache: false
+#              use_query_cache: true
+#              provider_class: org.hibernate.cache.EhCacheProvider
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    show-sql: true
+
+debug: true
