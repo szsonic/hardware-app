@@ -21,7 +21,7 @@ import java.util.List;
 @Entity
 @Table(name = "menu")
 @org.hibernate.annotations.Table(appliesTo = "menu", comment = "系统菜单信息模型")
-//@Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
+@Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
 public class Menu extends BaseModel {
 	private static final long serialVersionUID = -7626707213960303318L;
 	/**

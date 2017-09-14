@@ -2,6 +2,8 @@ package com.support.controller;
 
 import com.google.gson.Gson;
 import org.apache.commons.lang.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.InitBinder;
@@ -22,6 +24,8 @@ import java.util.Map;
  * @date: 2017/8/29
  */
 public abstract class BaseControllerSupport {
+    private final static Logger logger = LoggerFactory.getLogger(BaseControllerSupport.class);
+
     /**
      * 数据自动绑定及转换（如要自定义绑定则需要覆盖此方法）
      *
@@ -114,7 +118,7 @@ public abstract class BaseControllerSupport {
                 localHttpServletResponse.getWriter().write(content);
             }
         } catch (IOException e) {
-            Log.e(e.getMessage(), e);
+            logger.error(e.getMessage(), e);
         }
     }
 
@@ -219,7 +223,7 @@ public abstract class BaseControllerSupport {
             }
             params.put(name, valueStr);
         }
-        Log.i("参数获取成功:");
-        Log.i(new Gson().toJson(params));
+        logger.info("参数获取成功:");
+        logger.info(new Gson().toJson(params));
     }
 }
